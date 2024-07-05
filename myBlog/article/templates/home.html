@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+{% block content %}
+
+    <div class="container home">
+        <h1>Today's Articles</h1>
+        {% for data in articles %}
+        <div class="blog-container">
+            <h3><a href="{% url 'blog' data.id %}">{{data.title|title}}</a></h3>
+            <p>{{data.desc|truncatewords:10}}</p>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

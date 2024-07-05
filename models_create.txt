@@ -1,0 +1,41 @@
+1. creatingg simple module
+from django.db import models
+
+class Member(models.Model):
+    firstname = models.CharField(max_length=30)
+    lastname = models.CharField(max_length=30)
+
+2. Add app in project
+3. run migration command
+python manage.py migrate
+python manage.py makemigrations app_name
+
+4. viewing sql
+python manage.py sqlmigrate appname series_num
+
+5. adding values to model(table)
+python manage.py shell
+from appname.models import Modelname
+modelname.objects.all()
+modelname = modelname(firstname= 'Emil",lastname='refreses')
+modelname.save()
+modelname.objects.all().values()
+
+6. adding multiple values
+
+member1 = member()
+member2 = member()
+member3 = member()
+member4 = member()
+member5 = member()
+
+member_list = [member1,member2,member3,member4,member5]
+for i in member_list:
+        x.save()
+
+7. update values
+x= member.objects.all()[4]
+x.firstname = 'alfred'
+x.lastname = 'stalikken'
+x.save()
+

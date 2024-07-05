@@ -1,0 +1,35 @@
+1. creating folder Pro_3
+2. creating virtual environment within pro_3 and activate it.
+3. create a project within Pro_3
+4. create app within project 
+5. go to setting and add app .
+6. go to urls.py of project-level and add app 
+7. create urls.py of app-level.
+8. go to views.py and initialize a list called articles
+9. articles list contains dictionary of three items.
+10. create your first views as home and render home.html with article list.
+11. as we cannot render list directly we have to create a context which is a dictionary of one single item key is string and value is list article
+12. create a template folder in app level and create html file home.html which contains three things mainly. first is main.html file and second is class container home and blog-container
+13. main.html is a common html file so need to be created in project-level templates. project-level templates must be added in the settings.py
+14. to add templates or to register templates in the TEMPLATES list need to add it with BASEDIR reference in DIR list
+15. main.html contains three things static folder,bootstrap link,navbar.html file 
+16. static folder css folder and in that css we have main.css file which have css coding of main page of home page.static folder must be added in static directory list of settings.py
+17. bootstrap link should be added to implement front end frame work funtionalities(javascript)
+18. for navbar we need to create navbar.html file in project level and include it in main.html by using include template
+different tags 
+1.{{var_name}}--> reading var 2.{% %}--> template holder 3.{% extends %}-->inherting 4.{% load dir_name %}-->loading app 5.{% include %}--> including file
+19. create second view blog which takes two arguments (request and primary key)
+20. blog is rendering blog.html page which is present in app level templates
+21. blog is returning title and cescription of articles.
+22. create  third view about which renders about.html .
+23. about.html is present in app level templates which contains some static data.
+
+Django tags:
+1) {% load dir_name %}: it is used load static folder which connects html and css.
+2) {{var_name}}:reading data dynamically
+3){% extends file_name %}:helps to inherit html files  of different directory.
+4) for  loop syntax: {% for %}
+                    {% end for %}
+5) if statement syntax:{% if condition %}
+                        {% endif %}
+
